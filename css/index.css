@@ -263,6 +263,13 @@ a[href].direct-link:focus:visited,
   flex-direction: row;
 }
 
+.main-intro img {
+  width: 300px;
+  height: 300px;
+  margin-right: 24px;
+  border-radius: 50%;
+}
+
 @media only screen and (max-width: 600px) {
   .main-intro {
     flex-direction: column;
