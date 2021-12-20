@@ -23,7 +23,37 @@ Alongside my day-job, some recent tech interests have included accessibility (a1
 
 I studied political science at Williams College, a tiny liberal arts college in Western, MA. I'm a huge proponent of the benefits of going to small liberal arts colleges and may write about this in the future. During my junior year, I was fortunate to attend the Williams-Exeter Programme at The University of Oxford in Oxford, England. After this experience, I'm also a huge proponent of studying/living abroad!
 
-Astute readers may notice a disconnect between my political science background and my current work in sofware engineering. I bridged that gap through a three-month intensive program at Hack Reactor, a coding bootcamp I attended in Austin, TX. At the time, I planned to stay in Austin and build a tech career there, but I ultimately found my way to the Bay Area.
+Astute readers may notice a disconnect between my political science background and my current work in software engineering. I bridged that gap through a three-month intensive program at Hack Reactor, a coding bootcamp I attended in Austin, TX. At the time, I planned to stay in Austin and build a tech career there, but I ultimately found my way to the Bay Area.
+
+### locations
+
+I've lived in quite a few places over the years:
+
+##### 1993-2011: Northampton, MA
+
+_Northampton sits on un-ceded Nipmuc and Pocumtuc territory_
+
+##### 2011-2015: Williamstown, MA
+
+_Williamstown sits on un-ceded Mohican territory_
+
+\*I spent 2013-2014 in Oxford, England in the UK for a study abroad program
+
+##### 2015-2019: Middlebury, VT
+
+_Middlebury sits on un-ceded Wabanaki (Dawnland Confederacy) territory_
+
+##### Early 2019: Holyoke, MA
+
+_Holyoke sits on un-ceded Nipmuc and Pocumtuc territory_
+
+##### Mid-Late 2019: Austin, TX
+
+_Austin sits on un-ceded Tonkawa territory_
+
+##### December 2019-Present: Sunnyvale, CA
+
+_Sunnyvale sits on un-ceded Tamien Nation and Ohlone territory_
 
 ### fun
 
@@ -38,10 +68,10 @@ A few current hobbies include:
 
 ### politics
 
-This section will start a bit sparse and be updated over time. I began in high school/college as a fairly mainstream liberal/democrat and did a lot of electoral work for campaigns in MA including Elizabeth Warren's successful 2012 Senate race. Over time, my views shifted significantly further to the left and I now identify as a Democratic Socialist and am a dues-paying member of the DSA. A few things I believe strongly in are:
+I began in high school/college as a fairly mainstream liberal/democrat and did a lot of electoral work for campaigns in MA including Elizabeth Warren's successful 2012 Senate race. Over time, my views shifted significantly further to the left and I now identify as a Democratic Socialist and am a dues-paying member of the DSA. A few things I believe strongly in are:
 
 - Black Lives Matter ✊🏿 and policing/mass incarceration need to be abolished and replaced with an entirely new system of restorative justice and community-led accountability.
 - Any pregnant person who needs or wants one should have easy, safe, free, and legal access to abortion services.
 - Queer 🏳️‍🌈 and trans 🏳️‍⚧️ people are lovely, valid, and deserve full legal and social equality
 - Climate change is a clear and present existential threat to humanity and we need to pursue vast, radical social changes to fight it
-- Healthcare should be 100% free at the point of service to anyone seeking it and that no aspect of the healthcare system should be private or generate profits for anyone
+- Healthcare should be 100% free at the point of service to anyone seeking it and no aspect of the healthcare system should be private or generate profits
