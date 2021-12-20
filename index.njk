@@ -4,6 +4,22 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+<h1>Hi, I'm Garrett 👋</h1>
+<article class="main-intro">
+{% image "./_site/img/memoji.png", "An Apple Memoji image of Garrett, sitting behind a laptop. He has brown hair, glasses, and a beard." %}
+<section>
+  <p>I'm a software engineer at LinkedIn. I live in Sunnyvale, CA and am from Northampton, a small city in Western Massachusetts.</p>
+  <p>Prior to LinkedIn, I learned how to code at Hack Reactor, studied Political Science at Williams College + The University of Oxford, and had a wonderful few years living in Vermont doing work in education + green energy.</p>
+  <p>You can also find me on
+    <a href="{{ 'http://www.twitter.com/garrettwelson'}}">Twitter</a>,
+    <a href="{{ 'http://www.github.com/garrettwelson'}}">GitHub</a>, or
+    <a href="{{ 'http://www.linkedin.com/in/garrettwelson'}}">LinkedIn</a>.
+  </p>
+</section>
+</article>
+
+
+<section class="main-posts">
 {% set maxPosts = collections.posts.length | min(3) %}
 <h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
@@ -12,3 +28,4 @@ eleventyNavigation:
 {% include "postslist.njk" %}
 
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+</section>
