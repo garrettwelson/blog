@@ -125,12 +125,35 @@ code {
 /* Header */
 .home {
   padding: 0 1rem;
-  float: left;
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
 }
 .home :link:not(:hover) {
   text-decoration: none;
+}
+
+.pronouns {
+  margin: 1rem 0; /* 16px /16 */
+  font-size: 1em; /* 16px /16 */
+  border-bottom: 1px dotted black;
+  text-decoration: none;
+}
+
+.pronouns:hover {
+  background-image: url("/img/spectrum.svg");
+}
+
+.pronouns:hover:before {
+  position: relative;
+  display: block;
+  top: 1em;
+  height: 0px;
+  content: "🏳️‍🌈🏳️‍🌈🏳️‍🌈";
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Nav */
