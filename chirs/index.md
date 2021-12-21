@@ -1,7 +1,9 @@
 ---
 layout: layouts/page.njk
 title: The Cool Chris Zone
+description: All the fun facts about everyone's favorite pal Chirs
 templateClass: tmpl-post
+previewImage: "https://welson.net/img/chirs.jpg"
 ---
 
 ## has chris finished his book yet?

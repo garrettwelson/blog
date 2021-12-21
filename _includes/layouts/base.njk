@@ -11,15 +11,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://welson.net/">
-    <meta property="og:title" content="Garrett Welson's Blog">
-    <meta property="og:description" content="A tiny blog about my thoughts and life">
-    <meta property="og:image" content="https://welson.net/img/memoji.png">
+    <meta property="og:title" content="{{ title or metadata.title }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="{{ previewImage or metadata.previewImage }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://welson.net/">
-    <meta property="twitter:title" content="Garrett Welson's Blog">
-    <meta property="twitter:description" content="A tiny blog about my thoughts and life">
+    <meta property="twitter:title" content="{{ title or metadata.title }}">
+    <meta property="twitter:description" content="{{ description or metadata.description }}">
     <meta property="twitter:image" content="https://welson.net/img/memoji.png">
 
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
@@ -29,13 +29,17 @@
   </head>
   <body>
     <header class="navbar">
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-      <em class="pronouns"><a href="http://pronoun.is/he">he/him/his</a></em>
+      <h1 class="home">
+        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+      </h1>
+      <em class="pronouns">
+        <a href="http://pronoun.is/he">he/him/his</a>
+      </em>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
+        {%- for entry in collections.all | eleventyNavigation %}
+          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        {%- endfor %}
       </ul>
     </header>
 

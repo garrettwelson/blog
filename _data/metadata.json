@@ -3,6 +3,7 @@
   "url": "https://welson.net",
   "language": "en",
   "description": "A tiny blog about my thoughts and life",
+  "previewImage": "https://welson.net/img/memoji.png",
   "feed": {
     "subtitle": "A tiny blog about my thoughts and life",
     "filename": "feed.xml",
