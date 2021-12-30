@@ -50,6 +50,7 @@ header {
   border-bottom: 1px dashed var(--lightgray);
 }
 footer {
+  padding: 1rem;
   border-top: 1px dashed var(--lightgray);
 }
 footer:before {
