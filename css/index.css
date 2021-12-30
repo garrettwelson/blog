@@ -29,6 +29,7 @@ p,
 img {
   max-width: 37.5em; /* 600px /16 */
 }
+
 p,
 .tmpl-post li {
   line-height: 1.45;
@@ -277,10 +278,10 @@ a[href].direct-link:focus:visited,
 }
 
 .main-posts {
-  border: 1px;
+  /* border: 1px;
   border-color: var(--darkgray);
   border-style: dashed;
-  background-color: var(--lightgray);
+  background-color: var(--lightgray); */
   margin: 16px 0px;
 }
 
@@ -309,6 +310,11 @@ a[href].direct-link:focus:visited,
   flex-direction: row;
 }
 
+.main-divider {
+  visibility: hidden;
+  margin: 16px 0px;
+}
+
 @media only screen and (max-width: 600px) {
   .main-intro {
     flex-direction: column;
@@ -328,6 +334,13 @@ a[href].direct-link:focus:visited,
   .pronouns:after {
     content: none;
     text-decoration: none;
+  }
+
+  .main-divider {
+    visibility: visible;
+    max-width: 37.5em;
+    text-align: center;
+    margin: 16px 0px;
   }
 }
 
