@@ -135,10 +135,13 @@ code {
 .pronouns {
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
-  border-bottom: 1px dotted black;
   text-decoration: none;
 }
 
+.pronouns:after {
+  content: "⋅";
+  text-decoration: none;
+}
 .pronouns:hover {
   background-image: url("/img/spectrum.svg");
 }
@@ -301,6 +304,11 @@ a[href].direct-link:focus:visited,
   border-radius: 50%;
 }
 
+.navbar-section {
+  display: flex;
+  flex-direction: row;
+}
+
 @media only screen and (max-width: 600px) {
   .main-intro {
     flex-direction: column;
@@ -309,6 +317,7 @@ a[href].direct-link:focus:visited,
 
   .profile-image {
     margin-right: 0px;
+    margin-bottom: 16px;
   }
 
   .navbar {
@@ -316,9 +325,9 @@ a[href].direct-link:focus:visited,
     flex-direction: column;
   }
 
-  .navbar-section {
-    display: flex;
-    flex-direction: row;
+  .pronouns:after {
+    content: none;
+    text-decoration: none;
   }
 }
 
