@@ -294,7 +294,7 @@ a[href].direct-link:focus:visited,
   flex-direction: row;
 }
 
-.main-intro img {
+.profile-image {
   width: 300px;
   height: 300px;
   margin-right: 24px;
@@ -305,6 +305,20 @@ a[href].direct-link:focus:visited,
   .main-intro {
     flex-direction: column;
     align-items: center;
+  }
+
+  .profile-image {
+    margin-right: 0px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-section {
+    display: flex;
+    flex-direction: row;
   }
 }
 

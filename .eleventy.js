@@ -7,7 +7,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(src, alt, sizes) {
+async function imageShortcode(src, alt, sizes, className) {
   let metadata = await Image(src, {
     widths: [300, 600],
     formats: ["avif", "jpeg"],
@@ -19,6 +19,7 @@ async function imageShortcode(src, alt, sizes) {
     sizes,
     loading: "lazy",
     decoding: "async",
+    class: className,
   };
 
   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
