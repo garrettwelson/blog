@@ -1,3 +1,15 @@
+/* A Note to Anyone Reading This
+Yes, I am aware this CSS is a mess right now. I started with a template
+then made modifications as I went. I think I'm satisfied enough with the overall
+style now, but the CSS and class name conventions are in major need of a re-factor.
+
+My plan is:
+1) Migrate to using Sass - being able to use Sass conventions is so much nicer
+2) Make a file for each page template type
+3) Adopt more of a design token system for things like sizes
+4) Add a dark mode
+*/
+
 /* Colors */
 :root {
   --lightgray: #e0e0e0;
