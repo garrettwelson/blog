@@ -47,14 +47,19 @@
       <section>
     </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main
+      class="
+      {% if templateClass %} {{ templateClass }}"{% endif %}
+      "
+    >
 
       {{ content | safe }}
     </main>
 
     <footer>
       {# <section class="navbar-section"> #}
-        <p>Made with 💜 by Garrett Welson in Sunnyvale, CA, which is on the unceded lands of the <a href="http://www.muwekma.org" target="_blank">Mukwema Ohlone tribe</a></p>
+        <p>Made with 💜 by Garrett Welson. Copyright {% year %} <p>
+        <p>Written in Sunnyvale, CA, which is on the unceded lands of the <a href="http://www.muwekma.org" target="_blank">Mukwema Ohlone tribe</a></p>
       {# </section> #}
     </footer>
 

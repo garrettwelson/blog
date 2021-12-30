@@ -24,7 +24,7 @@ body {
 p:last-child {
   margin-bottom: 0;
 }
-p,
+/* p, */
 .tmpl-post li,
 img {
   max-width: 37.5em; /* 600px /16 */
@@ -48,6 +48,14 @@ main :first-child {
 }
 header {
   border-bottom: 1px dashed var(--lightgray);
+}
+footer {
+  border-top: 1px dashed var(--lightgray);
+}
+footer:before {
+  content: "";
+  display: table;
+  clear: both;
 }
 header:after {
   content: "";
@@ -278,10 +286,6 @@ a[href].direct-link:focus:visited,
 }
 
 .main-posts {
-  /* border: 1px;
-  border-color: var(--darkgray);
-  border-style: dashed;
-  background-color: var(--lightgray); */
   margin: 16px 0px;
 }
 
@@ -313,6 +317,18 @@ a[href].direct-link:focus:visited,
 .main-divider {
   visibility: hidden;
   margin: 16px 0px;
+}
+
+body {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(80ch, 100%)
+    1fr;
+}
+
+body > * {
+  grid-column: 2;
 }
 
 @media only screen and (max-width: 600px) {

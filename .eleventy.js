@@ -93,6 +93,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLiquidShortcode("image", imageShortcode);
   eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
+  //add date shortcode
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
