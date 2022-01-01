@@ -157,13 +157,8 @@ code {
 .pronouns {
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
-  text-decoration: none;
 }
 
-.pronouns:after {
-  content: "⋅";
-  text-decoration: none;
-}
 .pronouns:hover {
   background-image: url("/img/spectrum.svg");
 }
@@ -197,7 +192,7 @@ code {
 }
 .nav-item-active {
   font-weight: 700;
-  text-decoration: underline;
+  color: var(--blue);
 }
 
 /* Posts list */
