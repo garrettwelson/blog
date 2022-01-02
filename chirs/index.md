@@ -29,7 +29,7 @@ there fucking better be
 
 ### how can I contact chris if I have questions?
 
-well, he had a twitter but he deactivated it so, honestly, ¯\_(ツ)\_/¯
+well, he had a twitter but he deactivated it so, honestly, ¯\\\_(ツ)\_/¯
 
 ### what even is this page?
 
