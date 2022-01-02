@@ -339,6 +339,31 @@ body > * {
   grid-column: 2;
 }
 
+.chirs-progress {
+  padding: 2px;
+  width: 100%;
+  max-width: 500px;
+  border: 3px solid black;
+}
+
+.chirs-progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, lightgreen 50%, transparent 0);
+  background-size: 200% 100%;
+  background-position: right;
+  /* background-color: lightgreen; */
+  display: block;
+  text-align: right;
+  animation: fadeIn ease-in 3s forwards;
+  border-right: black;
+}
+
+@keyframes fadeIn {
+  100% {
+    background-position: left;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .main-intro {
     flex-direction: column;

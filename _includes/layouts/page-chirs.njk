@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<h1>{{ title }}</h1>
+
+<h2>Novel Progress Bar</h2>
+<div class="chirs-progress">
+  <div class="chirs-progress-bar" style={{ chirs.styleString | safe }}>
+    {{ chirs.progress }}% Done
+  </div>
+</div>
+
+{{ content | safe }}
