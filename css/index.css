@@ -358,6 +358,11 @@ body > * {
   border-right: black;
 }
 
+.post-image {
+  max-width: 100%;
+  height: auto;
+}
+
 @keyframes fadeIn {
   100% {
     background-position: left;
