@@ -1,6 +1,6 @@
 module.exports = function () {
   const total = 57;
-  const finished = 15
+  const finished = 16
   var percent = (finished * 100) / total;
   const progress = parseFloat(percent).toFixed(0);
   const styleString = `width:${progress}%`;
