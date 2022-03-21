@@ -5,6 +5,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItFootnote = require("markdown-it-footnote");
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, sizes, className) {
@@ -101,15 +102,17 @@ module.exports = function (eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
-      class: "direct-link",
-      symbol: "#",
-      level: [1, 2, 3, 4],
-    }),
-    slugify: eleventyConfig.getFilter("slug"),
-  });
+  })
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        placement: "after",
+        class: "direct-link",
+        symbol: "#",
+        level: [1, 2, 3, 4],
+      }),
+      slugify: eleventyConfig.getFilter("slug"),
+    })
+    .use(require("markdown-it-footnote"));
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Override Browsersync defaults (used only with --serve)
