@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Meta from "../components/Meta.astro";
+import "../styles/main.css";
 const { pageTitle } = Astro.props;
 ---
 
@@ -10,10 +11,13 @@ const { pageTitle } = Astro.props;
     <Meta title={pageTitle} />
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <!-- This wrapping <div> effectively pins the footer to the bottom -->
+    <div class="flex flex-col h-screen justify-between">
+      <Header />
+      <main class="flex-grow">
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>

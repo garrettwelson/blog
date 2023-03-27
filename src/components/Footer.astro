@@ -1,7 +1,10 @@
 ---
 const date = new Date().getFullYear();
+import SocialLinks from "./SocialLinks.astro";
+import data from "../data/site.json";
 ---
 
-<footer>
-  <div>© {date} ~ garrett welson</div>
+<footer class="flex flex-row justify-between">
+  <div>© {date} ~ {data.name.toLocaleLowerCase()} ~ {data.pronouns}</div>
+  <SocialLinks />
 </footer>

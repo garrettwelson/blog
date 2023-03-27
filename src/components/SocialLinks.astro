@@ -1,0 +1,39 @@
+---
+import github from "../media/logos/github.svg";
+import twitter from "../media/logos/twitter.svg";
+import mastodon from "../media/logos/mastodon.svg";
+import linkedin from "../media/logos/linkedin.svg";
+import data from "../data/site.json";
+---
+
+<!-- icons from 
+  https://www.svgrepo.com/collection/social-media-outline-vectors/
+ -->
+<nav>
+  <ul class="flex flex-row">
+    <li class="mx-1">
+      <a href={data.social.github}
+        ><img class="w-6 h-6" src={github} alt="logo for github.com" /></a
+      >
+    </li>
+    <li class="mx-1">
+      <a href={data.social.twitter}
+        ><img class="w-6 h-6" src={twitter} alt="logo for twitter.com" /></a
+      >
+    </li>
+    <li class="mx-1">
+      <a href={data.social.mastodon}
+        ><img
+          class="w-6 h-6"
+          src={mastodon}
+          alt="logo for mastodon.social"
+        /></a
+      >
+    </li>
+    <li class="mx-1">
+      <a href={data.social.linkedin}
+        ><img class="w-6 h-6" src={linkedin} alt="logo for linkedin.com" /></a
+      >
+    </li>
+  </ul>
+</nav>
