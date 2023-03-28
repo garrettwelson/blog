@@ -1,0 +1,37 @@
+---
+import phrases from "../data/phrases.json";
+---
+
+<div class="text-sm marquee">
+  <p>{phrases.homepage.message}</p>
+  <a class="font-bold underline" href={phrases.homepage.linkUrl}
+    >{phrases.homepage.linkText}</a
+  >
+</div>
+
+<style>
+  /* Kudos to https://blog.logrocket.com/deprecated-html-elements-and-what-to-use-instead/#css-animation
+    for the inspiration */
+
+  /* Makes the animation pause on hover */
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* The animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* media query to enable animation for only those who want it */
+  @media (prefers-reduced-motion: no-preference) {
+    .marquee {
+      animation: marquee 15s linear infinite;
+    }
+  }
+</style>
