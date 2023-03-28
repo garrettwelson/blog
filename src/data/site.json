@@ -2,6 +2,11 @@
     "name": "Garrett Welson",
     "firstName": "Garrett",
     "pronouns": "he/him",
+    "location": "SF Bay Area",
+    "jobTitle": "Senior Software Engineer",
+    "employer": "LinkedIn",
+    "education": "Williams College & Exter College, Oxford University",
+    "bootcamp": "Hack Reactor, Austin",
     "social": {
         "github": "https://github.com/garrettwelson",
         "twitter": "https://twitter.com/garrettwelson",

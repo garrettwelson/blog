@@ -7,5 +7,5 @@ module.exports = {
 			'sans': ['Avenir', 'Avenir Next LT Pro', 'Montserrat', 'Corbel', 'URW Gothic', 'source-sans-pro', 'sans-serif'	]
 		}
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }
