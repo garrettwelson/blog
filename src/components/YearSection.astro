@@ -1,0 +1,13 @@
+---
+const { year, months } = Astro.props;
+import { numberToMonth } from "../utils/posts-by-date";
+import MonthSection from "./MonthSection.astro";
+const sortedMonths = Object.keys(months).sort().reverse();
+---
+
+<h3 class="text-xl my-2">{year}</h3>
+{
+  sortedMonths.map((month) => {
+    return <MonthSection month={numberToMonth(month)} days={months[month]} />;
+  })
+}

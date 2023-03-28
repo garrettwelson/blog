@@ -1,0 +1,24 @@
+---
+const { day, posts } = Astro.props;
+---
+
+<div class="ml-8">
+  <h5 class="text-base my-2">{day}</h5>
+  <ul class="ml-4">
+    {
+      posts.map((post) => {
+        return (
+          <li class="list-disc list-inside">
+            <a class="font-bold underline" href={`/blog/${post.slug}`}>
+              {post.data.title}
+            </a>
+            <span> ~ </span>
+            <time datetime={String(post.data.date)}>
+              {post.data.date?.toLocaleDateString()}
+            </time>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

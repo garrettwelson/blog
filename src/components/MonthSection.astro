@@ -1,0 +1,16 @@
+---
+import DaySection from "./DaySection.astro";
+const { month, days } = Astro.props;
+const sortedDays = Object.keys(days).sort(function (a: any, b: any) {
+  return b - a;
+});
+---
+
+<div class="ml-8">
+  <h4 class="text-lg my-2">{month}</h4>
+  {
+    sortedDays.map((day) => {
+      return <DaySection day={day} posts={days[day]} />;
+    })
+  }
+</div>
