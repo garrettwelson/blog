@@ -6,11 +6,13 @@ const sortedDays = Object.keys(days).sort(function (a: any, b: any) {
 });
 ---
 
-<div class="ml-8">
-  <h4 class="text-lg my-2">{month}</h4>
-  {
-    sortedDays.map((day) => {
-      return <DaySection day={day} posts={days[day]} />;
-    })
-  }
+<div class="ml-2 md:ml-8 flex flex-col md:flex-row">
+  <h4 class="text-xl my-2 w-20">{month}</h4>
+  <div class="flex flex-col">
+    {
+      sortedDays.map((day) => {
+        return <DaySection day={day} posts={days[day]} />;
+      })
+    }
+  </div>
 </div>

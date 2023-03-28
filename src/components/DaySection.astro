@@ -2,13 +2,13 @@
 const { day, posts } = Astro.props;
 ---
 
-<div class="ml-8">
-  <h5 class="text-base my-2">{day}</h5>
+<div class="ml-2 md:ml-8">
+  <h5 class="text-xl my-2">{day}</h5>
   <ul class="ml-4">
     {
       posts.map((post) => {
         return (
-          <li class="list-disc list-inside">
+          <li>
             <a class="font-bold underline" href={`/blog/${post.slug}`}>
               {post.data.title}
             </a>
