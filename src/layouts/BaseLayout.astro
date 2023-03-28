@@ -3,12 +3,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Meta from "../components/Meta.astro";
 import "../styles/main.css";
-const { pageTitle, mainClasses } = Astro.props;
+const { pageTitle } = Astro.props;
 ---
 
 <html
   lang="en"
-  class="leading-6 m-auto text-[1.25em] max-w-[70ch] px-4 md:px-0"
+  class="leading-6 m-auto text-[1.25em] md:max-w-[70ch] px-4 md:px-0"
 >
   <head>
     <Meta title={pageTitle} />
@@ -17,7 +17,7 @@ const { pageTitle, mainClasses } = Astro.props;
     <!-- This wrapping <div> effectively pins the footer to the bottom -->
     <div class="flex flex-col h-screen justify-between">
       <Header />
-      <main class={`${mainClasses} flex-grow`}>
+      <main class="flex-grow">
         <slot />
       </main>
       <Footer />
