@@ -1,0 +1,43 @@
+---
+title: Automating Wordle
+description: How solving repetitive problems can brighten your day
+date: 2022-01-22
+tags:
+  - automation
+  - games
+  - work-in-progress
+---
+
+_This post is very much a work in progress and will be added to over time. Last updated: {{ page.date | htmlDateString }}_
+
+Like most of the world, I've been playing the addictive and excellent word game, [Wordle](https://www.powerlanguage.co.uk/wordle/) almost daily for the past few weeks. For the uninitiated, Wordle requires you to guess a 5-letter word in 6 tries. For each guess, it tells you which letters are in the right place (green), which letters are in the word but in the wrong place (yellow), and which letters are not in the word at all (grey) — astute gamers may recognize this as being quite similar to the classic deduction game Mastermind.
+
+The most brilliant aspect of Wordle, however, beyond the [very cute origin story](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html), is the absolutely genius social aspect. After a round, Wordle outputs some text — using 🟨, 🟩, and ⬜ emoji to construct your board without revealing letters. For instance, my output the day of writing this post was as follows (you'll note how close I came to not getting it 😅)
+
+```
+Wordle 217 6/6
+
+⬜🟨🟩🟨⬜
+⬜🟩🟩🟨⬜
+⬜⬜🟩⬜🟩
+⬜⬜⬜⬜⬜
+🟨⬜⬜🟨🟨
+🟩🟩🟩🟩🟩
+```
+
+I had no clue what Wordle was until my Twitter feed was so full of these cryptic tweets of results from each day that I had to google it and play along. I started a [tweet thread](https://twitter.com/GarrettWelson/status/1481144002397171713?s=20) and after playing each day would open Twitter, find the thread, and reply to the last tweet with that new day's results. While this didn't take very long to do, I had an idle thought of how I might automate it. This was the result:
+
+{% image
+  "./dist/img/wordle.png",
+  "A screenshot of my Wordle automation in the iOS shortcuts app",
+  "width: 300px",
+  "post-image"
+%}
+
+Using Apple's **Shortcuts** app on my phone, I built a simple flow. I leveraged the excellent [Tweetbot](https://tapbots.com/tweetbot/) app, which supports shortcuts, to simply take the output text from Wordle and reply to my original tweet with the new results. The downside to this, however, was that it would only reply to the _original_ tweet, not the previous day's tweet as I had been doing.
+
+Puzzled, I briefly looked at Twitter's API documentation (don't judge me!) to see if I could find the URL of the last reply to a given tweet. I realized how excessive this would be, so I settled on a simpler approach: [Data Jar](https://datajar.app). Data Jar gives a simple key/value store (basically a really simple database) that can be accessed and updated from any Shortcut. I simply manually entered the URL of my most recent reply as a value called `wordleURL` — I then pass that in as the reply URL to the Tweetbot action. From there, Tweetbot's action returns the URL of my new tweet and I use that to update the value of `wordleURL` in Data Jar. Pretty simple!
+
+All in all, doing this process manually took, to be generous, maybe 30 seconds each day. Building and testing this shortcut took me maybe 15 minutes. So, after around 30 days I'll break even and everything after that will be "valuable" time saved (who am I kidding — it'll be more time to scroll through my Twitter).
+
+I share this example not because it is particularly interesting or complex, but because it is illustrative of how I approach automation: as a puzzle in and of itself. Like a good word in Wordle, any automation challenge has a set of initial approaches that don't quite work out. You may take an outside-the-box approach that doesn't quite work, and then a flash of inspiration will lead you to the wiser answer that was right in front of you the whole time. Automation doesn't have to be a lofty and important process — it can be approached as a fun puzzle to remove a tiny amount of friction and spark a small amount of creativity each day.
