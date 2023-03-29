@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const workEntries = await getCollection("work");
+
+---
+
+<BaseLayout pageTitle="projects">
+  <h2 class="text-2xl font-bold mb-6">my work</h2>
+  
+</BaseLayout>

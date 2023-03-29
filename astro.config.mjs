@@ -7,5 +7,8 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), mdx(), image()]
+  integrations: [tailwind(), svelte(), mdx(), image()],
+  experimental: {
+    assets: true
+  }
 });

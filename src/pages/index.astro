@@ -1,14 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "../data/site.json";
-import portrait from "../media/images/garrett.jpg";
+import { Image } from "astro:assets"
+import portrait from "../assets/images/garrett.jpg";
+const altText = `A memoji image of ${data.firstName}`
 import Highlights from "../components/Highlights.svelte";
 import Marquee from "../components/Marquee.astro";
 ---
 
 <BaseLayout pageTitle="home">
   <section class="flex flex-col md:flex-row items-center">
-    <img class="h-64 w-64" src={portrait} />
+    <Image class="h-64 w-64" src={portrait} alt={altText} />
     <div class="flex flex-col items-center md:items-start">
       <p class="font-bold text-2xl mb-4">
         Hey there! I'm {data.firstName} 👋
