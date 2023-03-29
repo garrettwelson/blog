@@ -1,0 +1,21 @@
+---
+const { entry } = Astro.props;
+const { title, when, screenshot, screenshotAlt, link } = entry.data;
+const { Content } = await entry.render();
+import { Image } from "astro:assets";
+---
+
+<article class="outline-dashed outline-1 p-4">
+  <header class="mb-4">
+    <h3 class="font-bold">
+      {title}
+    </h3>
+    <p>Built: {when}</p>
+    <p class="mb-4"><a href={link} class="underline">Click here to visit</a></p>
+    <Image src={screenshot} alt={screenshotAlt} />
+  </header>
+
+  <div class="prose">
+    <Content />
+  </div>
+</article>
