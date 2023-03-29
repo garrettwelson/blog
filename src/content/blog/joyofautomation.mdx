@@ -8,7 +8,8 @@ tags:
   - work-in-progress
 ---
 
-_This post is very much a work in progress and will be added to over time. Last updated: {{ page.date | htmlDateString }}_
+import { Image } from "@astrojs/image/components";
+import wordle from "../../media/images/blog/wordle/wordle.png";
 
 Like most of the world, I've been playing the addictive and excellent word game, [Wordle](https://www.powerlanguage.co.uk/wordle/) almost daily for the past few weeks. For the uninitiated, Wordle requires you to guess a 5-letter word in 6 tries. For each guess, it tells you which letters are in the right place (green), which letters are in the word but in the wrong place (yellow), and which letters are not in the word at all (grey) — astute gamers may recognize this as being quite similar to the classic deduction game Mastermind.
 
@@ -27,12 +28,7 @@ Wordle 217 6/6
 
 I had no clue what Wordle was until my Twitter feed was so full of these cryptic tweets of results from each day that I had to google it and play along. I started a [tweet thread](https://twitter.com/GarrettWelson/status/1481144002397171713?s=20) and after playing each day would open Twitter, find the thread, and reply to the last tweet with that new day's results. While this didn't take very long to do, I had an idle thought of how I might automate it. This was the result:
 
-{% image
-  "./dist/img/wordle.png",
-  "A screenshot of my Wordle automation in the iOS shortcuts app",
-  "width: 300px",
-  "post-image"
-%}
+<Image src={wordle} alt="a screenshot of my Wordle shortcut" />
 
 Using Apple's **Shortcuts** app on my phone, I built a simple flow. I leveraged the excellent [Tweetbot](https://tapbots.com/tweetbot/) app, which supports shortcuts, to simply take the output text from Wordle and reply to my original tweet with the new results. The downside to this, however, was that it would only reply to the _original_ tweet, not the previous day's tweet as I had been doing.
 
