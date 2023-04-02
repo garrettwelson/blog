@@ -1,8 +1,10 @@
 ---
 const { entry } = Astro.props;
-const { title, when, screenshot, screenshotAlt, link } = entry.data;
+const { title, screenshot, screenshotAlt, link, githubLink } = entry.data;
 const { Content } = await entry.render();
 import { Image } from "astro:assets";
+const githubLabel = `Link to ${title} project on GitHub.com`;
+const linkLabel = `Link to project website for ${title}`;
 ---
 
 <article class="outline-dashed outline-1 p-4">
@@ -10,12 +12,29 @@ import { Image } from "astro:assets";
     <h3 class="font-bold">
       {title}
     </h3>
-    <p>Built: {when}</p>
-    <p class="mb-4"><a href={link} class="underline">Click here to visit</a></p>
+    <div class="flex flex-row my-2">
+      <div class="mr-2">
+        <a href={githubLink} aria-label={githubLabel}
+          ><img
+            class="w-6 h-6"
+            src="logos/github.svg"
+            alt="logo for github.com"
+          /></a
+        >
+      </div>
+      <div class="mr-2">
+        <a href={link} aria-label={linkLabel}
+          ><img
+            class="w-6 h-6"
+            src="logos/externalLink.svg"
+            alt="external link logo"
+          /></a
+        >
+      </div>
+      <div class="underline text-indigo-700">
+        <a href={`/work/${entry.slug}`}>Click here to view more details</a>
+      </div>
+    </div>
     <Image src={screenshot} alt={screenshotAlt} />
   </header>
-
-  <div class="prose">
-    <Content />
-  </div>
 </article>
