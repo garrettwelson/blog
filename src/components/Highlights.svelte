@@ -43,7 +43,7 @@
   <Card
     title="work"
     description="a brief overview of some of the professional projects I've worked on with links where relevant"
-    url="/projects"
+    url="/work"
     background={projectsColor}
   />
 </div>
