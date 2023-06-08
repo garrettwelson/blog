@@ -27,7 +27,7 @@
   const projectsColor = colors[2];
 </script>
 
-<div class="flex flex-wrap my-4">
+<div class="flex flex-wrap justify-evenly my-4">
   <Card
     title={"about me"}
     description={"a longer personal + professional bio along with my resume and contact info"}

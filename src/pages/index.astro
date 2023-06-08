@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "../data/site.json";
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 import portrait from "../assets/images/garrett.jpg";
-const altText = `A memoji image of ${data.firstName}`
+const altText = `A memoji image of ${data.firstName}`;
 import Highlights from "../components/Highlights.svelte";
-import Marquee from "../components/Marquee.astro";
+import Spotlight from "../components/Spotlight.astro";
 ---
 
 <BaseLayout pageTitle="home">
@@ -26,6 +26,7 @@ import Marquee from "../components/Marquee.astro";
     </div>
   </section>
   <aside>
+    <Spotlight />
     <Highlights client:load />
   </aside>
 </BaseLayout>
